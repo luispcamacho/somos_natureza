@@ -620,3 +620,19 @@ pre tt:after {
     font-size: 100%;
   }
 }
+#header{
+  padding:.5em;
+  margin-bottom: 0;
+  font-family: 'Amatic SC', cursive;
+}
+#caption{
+  padding:.5em;
+  margin-bottom: 0;
+  font-family: 'Amatic SC', cursive;
+  background-color: rgba(0,0,0,0.7);
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  color: white;
+  white-space: pre
+}

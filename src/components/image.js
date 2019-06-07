@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import BackgroundImage from 'gatsby-background-image'
+import styled from 'styled-components'
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,20 +14,33 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const Image = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
+const Image = () => (<StaticQuery
+  query={graphql`
+    query {
+      backgroundImage: file(relativePath: { eq: "lobo_iberico.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
-    `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
-  />
-)
-export default Image
+    }
+  `}
+
+    // Peneda-Gerês-National
+  render={data =>
+    <BackgroundImage style={{height:`80vh`}}
+      fluid={data.backgroundImage.childImageSharp.fluid} >
+      <h2 id="caption">Pelo Reconhecimento dos Direitos do Lobo Ibérico</h2>
+    </BackgroundImage>
+  }
+/>)
+
+  const StyledBackgroundSection = styled(Image)`
+  width: 100%;
+  background-position: bottom center;
+  background-repeat: repeat-y;
+  background-size: cover;`
+
+
+export default StyledBackgroundSection
