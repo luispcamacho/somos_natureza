@@ -1,7 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import BackgroundImage from 'gatsby-background-image'
-import styled from 'styled-components'
+import BackgroundImage from 'gatsby-image'
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -29,14 +28,10 @@ const Image = () => (<StaticQuery
 
     // Peneda-Gerês-National
   render={data =>
-    <BackgroundImage style={{height:`309px`, width:`1036px`, margin: `25% auto`}}
+    <BackgroundImage style={{height:`309px`, width:`1036px`}}
       fluid={data.backgroundImage.childImageSharp.fluid} >
     </BackgroundImage>
   }
 />)
 
-  const StyledBackgroundSection = styled(Image)`
-  margin: 28vh auto
-`
-
-export default StyledBackgroundSection
+export default Image

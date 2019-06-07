@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
             transtion: 'height .25s ease-in'
           }}
         >
-          <main>{children}</main>
+          <main style={{display:`flex`, justifyContent:`center`, alignItems:`center`, height: `100vh`}}>{children}</main>
         </div>
         <style>
           @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
