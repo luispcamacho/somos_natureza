@@ -31,12 +31,7 @@ const Layout = ({ children }) => (
             transtion: 'height .25s ease-in'
           }}
         >
-          <main style={{height: '100vh'}}>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <main>{children}</main>
         </div>
         <style>
           @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');

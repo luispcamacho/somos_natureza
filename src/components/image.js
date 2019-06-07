@@ -17,7 +17,7 @@ import styled from 'styled-components'
 const Image = () => (<StaticQuery
   query={graphql`
     query {
-      backgroundImage: file(relativePath: { eq: "lobo_iberico.jpg" }) {
+      backgroundImage: file(relativePath: { eq: "logo.JPG" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -29,18 +29,14 @@ const Image = () => (<StaticQuery
 
     // Peneda-Gerês-National
   render={data =>
-    <BackgroundImage style={{height:`80vh`}}
+    <BackgroundImage style={{height:`309px`, width:`1036px`, margin: `25% auto`}}
       fluid={data.backgroundImage.childImageSharp.fluid} >
-      <h2 id="caption">Pelo Reconhecimento dos Direitos do Lobo Ibérico</h2>
     </BackgroundImage>
   }
 />)
 
   const StyledBackgroundSection = styled(Image)`
-  width: 100%;
-  background-position: bottom center;
-  background-repeat: repeat-y;
-  background-size: cover;`
-
+  margin: 28vh auto
+`
 
 export default StyledBackgroundSection
