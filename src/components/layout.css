@@ -625,12 +625,8 @@ pre tt:after {
   margin-bottom: 0;
   font-family: 'Amatic SC', cursive;
   font-size: 10em;
-  white-space: pre;
+  margin-top: 26vh;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  flex:1;
 }
 #caption{
   padding:.5em;

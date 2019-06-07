@@ -29,7 +29,7 @@ const Image = () => (<StaticQuery
 
     // Peneda-Gerês-National
   render={data =>
-    <BackgroundImage style={{height:`8how0vh`}}
+    <BackgroundImage style={{height:`80vh`}}
       fluid={data.backgroundImage.childImageSharp.fluid} >
       <h2 id="caption">Pelo Reconhecimento dos Direitos do Lobo Ibérico</h2>
     </BackgroundImage>
