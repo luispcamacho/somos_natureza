@@ -17,7 +17,7 @@ import styled from 'styled-components'
 const Image = () => (<StaticQuery
   query={graphql`
     query {
-      backgroundImage: file(relativePath: { eq: "logo.png" }) {
+      backgroundImage: file(relativePath: { eq: "lobo_iberico.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
