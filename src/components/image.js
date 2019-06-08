@@ -28,7 +28,7 @@ const Image = () => (<StaticQuery
 
     // Peneda-Gerês-National
   render={data =>
-    <BackgroundImage style={{height:`309px`, width:`1036px`}}
+    <BackgroundImage style={{width:`1036px`}}
       fluid={data.backgroundImage.childImageSharp.fluid} >
     </BackgroundImage>
   }
