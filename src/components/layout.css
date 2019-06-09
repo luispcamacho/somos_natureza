@@ -1,3 +1,7 @@
+.wf-loading h1, .wf-loading h2 {
+  visibility: hidden;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -620,6 +624,7 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
 #header{
   padding:.5em;
   margin-bottom: 0;

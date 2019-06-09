@@ -12,7 +12,7 @@ const IndexPage = () => (
         <h1 style={{display: 'inline'}} id="header">Eventos</h1>
       </div>
     </div>
-    <Image />
+    <Image src="lobo_iberico.jpg" />
     
   </Layout>
 )

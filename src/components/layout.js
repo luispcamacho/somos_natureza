@@ -38,9 +38,6 @@ const Layout = ({ children }) => (
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
         </div>
-        <style>
-          @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
-        </style>
       </>
     )}
   />
