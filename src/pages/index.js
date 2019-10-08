@@ -1,12 +1,46 @@
-import React from "react"
+import React from 'react';
+import Layout from '../components/layout'
+import BgImageSlider from '../components/image'
+import { StaticQuery, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
+const IndexPage = ({ data, errors }) => {
+  //showSlides({ imageBgNodes });
+  if (errors) {
+    return (
+      <Layout>
+        
+      </Layout>
+    );
+  }
+  
+  return (<StaticQuery
+    query={graphql`
+      query {
+        allFile(filter: { extension: { regex: "/(jpg)|(png)/" }, relativeDirectory: {eq: "Banners"} }) {
+          edges {
+            node {
+              id
+              name
+              relativeDirectory
+              childImageSharp {
+                fluid(maxWidth: 915, quality: 70) {
+                  aspectRatio
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => {
+      return (<Layout>
+          <BgImageSlider style={{overflow:'hidden'}} imageSlides={data.allFile.edges}/>
+      </Layout>)
+    }}
+  />
+    
+  );
+};
 
-const IndexPage = () => (
-  <Layout>
-    <Image />
-  </Layout>
-)
-
-export default IndexPage
+export default IndexPage;
